@@ -1,10 +1,7 @@
-# # U of M Golf Course Score Tracking App Project
-Persona, User Stories, Data Structure: https://docs.google.com/document/d/17xVdjNVwEDpMz-LQwW1o9AHcS_0NBCL5sgAg7i_aLkM/edit
+# Name TBD Triva App
 
 # Project Overview
-The app will allow users to log in. Users will be able to enter their scores, enter the number of putts they made and take notes that they want to capture in a notes section.
-
-Users will also be able to update scores, delete scores, and have the app determine their handicap after they've played at least 3 rounds. Handicaps will be based on USGA rules for handicapping.
+The app will allow users to log in. Users will be able to play games of trivia with friends or random users, trivia games will be interactive including chat. Question will only be in mulitple choice format.
 
 # Presentation and Demo
 Slides: https://docs.google.com/presentation/d/1L6u_S4z8b-x_6oBC4NJC7Tuah9tnnZ2NvktnGiymGVI/edit?usp=sharing
