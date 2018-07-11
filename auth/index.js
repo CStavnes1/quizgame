@@ -13,7 +13,7 @@ var User = require('./models/user');
 var init = function(){
  // auth code goes here 
 
- // send to and check user instances from session with serializeUser and deserializeUser
+ // send to and check user instances from session with passport serializeUser and deserializeUser
 
  // serialize
  passport.serializeUser(function(user, done) {
