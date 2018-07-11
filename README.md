@@ -19,7 +19,7 @@ NPM must be installed. All other dependencies are installed through npm during s
 7. You must have an internet connection to be able to sign in to the app. This application relies on a Google account for sign-in and session management. 
 
 # Use
-This application is intended to be used as a digital scorecard and match history/stat tracker for players of the University of Minnesota Les Bolstad Golf Course. Users will log in and see their statistics based on their previous matches. They can start a new game, and enter their score data hole-by-hole, as they play. After a match is completed, users can visit the history page to see a condensed scorecard view of each of their previous matches. 
+This application is intended to be used as a fun interactive trivia game. Users will log in and see their statistics based on their previous matches. They can start a new game, and enter their score data hole-by-hole, as they play. After a match is completed, users can visit the history page to see a condensed scorecard view of each of their previous matches. 
 
 # Features 
 Home Page
