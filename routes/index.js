@@ -11,7 +11,26 @@ var Room = require('./models/room');
 
 // routes: login, register, home, rooms, gameRoom, logout, history page 
 
-// login route
+// homepage - basic authentication check/simply redirect route to either login page or room page depending
+// on the user's authentication state 
+
+router.get('/', function(req, res, next) {
+// If user is already logged in, then redirect to rooms page
+    if (req.isAuthenticated()) 
+    {
+      res.redirect('/rooms');
+    } 
+    else 
+    {
+      res.render('login', {
+        success: req.flash('success')[0],
+        errors: req.flash('error'),
+        showRegisterForm: req.flash('showRegisterForm')[0]
+      });
+    }
+  });
+
+// passport login route
 router.post('/login', passport.authenticate('local', {
   // on successful login redirect to the rooms page 
   successRedirect: '/rooms',
@@ -20,7 +39,7 @@ router.post('/login', passport.authenticate('local', {
   failureFlash: true
 }));
 
-// registration route 
+// passport registration route 
 router.post('/register', function(req, res, next) {
   var credentials = { 'username': req.body.username, 'password': req.body.password };
   if (credentials.username === '' || credentials.password === '') {
@@ -51,14 +70,16 @@ router.post('/register', function(req, res, next) {
   }
 });
 
-// Logout route
+// passport/session logout route
 router.get('/logout', function(req, res, next) {
-    // remove the req.user property and clear the login session
+    // clear session
     req.logout();
-  
-    // destroy session data
+    // delete stored session data
     req.session = null;
-  
-    // redirect to homepage
+    // final home redirect
     res.redirect('/');
   });
+
+  // rooms page
+
+  // active game page  
