@@ -3,11 +3,11 @@
 var port = process.env.PORT || 3000;
 
 // local paths
-var routes 		= require('./app/routes');
-var session 	= require('./app/session');
-var passport    = require('./app/auth');
-var sickserver 	= require('./app/socket')(app);
-var logger 		= require('./app/logger');
+var routes 		= require('./routes');
+var session 	= require('./session');
+var passport    = require('./auth');
+var sickserver 	= require('./socket')(app);
+var logger 		= require('./logger');
 
 // npm dependencies
 var express 	= require('express');

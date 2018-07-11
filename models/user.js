@@ -1,7 +1,7 @@
 'use strict';
 
 // import the user model from the database schema
-var userModel = require('./database').models.user;
+var userModel = require('./db').models.user;
 
 // newuser create function
 var create = function (data, callback){
