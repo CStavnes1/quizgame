@@ -20,6 +20,11 @@ var flash 		= require('connect-flash');
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'ejs');
 
+// handle 404
+app.use(function(req, res, next) {
+    res.status(404).sendFile(process.cwd() + '/app/views/404.htm');
+  });
+
 // app use for body parser, session, passport express, routes 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -29,10 +34,5 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use('/', routes);
-
-// 404 page
-app.use(function(req, res, next) {
-  res.status(404).sendFile(process.cwd() + '/app/views/404.htm');
-});
 
 sickserver.listen(port);

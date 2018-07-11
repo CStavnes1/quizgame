@@ -1,5 +1,8 @@
 'use strict';
 
+// https://scotch.io/tutorials/easy-node-authentication-setup-and-local
+// reference for rendering login page(s) using javascript templating + .ejs files 
+
 var config = require('./config');
 var passport = require('passport');
 var loggern= require('./logger');
